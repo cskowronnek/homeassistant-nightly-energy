@@ -4,7 +4,7 @@ Deutsch | [English](README.en.md)
 
 Dieses Verzeichnis enthält ein kleines Python-Tool, das stündliche Home-Assistant-Statistikwerte per REST abruft, den Nachtanteil berechnet und eine Excel-Datei exportiert.
 
-Standardmäßig wird die Nacht für Flensburg so definiert:
+Standardmäßig nutzt das Tool Flensburg als Beispielort. Für jeden Ort wird die Nacht so definiert:
 
 ```text
 Sonnenuntergang - 1 Stunde bis Sonnenaufgang am Folgetag + 1 Stunde
@@ -54,10 +54,19 @@ Oder mit direkten Parametern:
 
 ## Typische Beispiele
 
-Sonnenbasierte Nacht für Flensburg, letzte 3 Monate:
+Sonnenbasierte Nacht mit dem Default-Beispielort Flensburg, letzte 3 Monate:
 
 ```bash
 ./bin/python ha_nachtverbrauch_excel_rest.py
+```
+
+Minimaler Aufruf für den eigenen Ort:
+
+```bash
+./bin/python ha_nachtverbrauch_excel_rest.py \
+  --location-name "Hamburg" \
+  --latitude 53.5511 \
+  --longitude 9.9937
 ```
 
 Sonnenbasierte Nacht für 12 Monate:

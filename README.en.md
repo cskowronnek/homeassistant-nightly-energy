@@ -4,7 +4,7 @@
 
 This directory contains a small Python tool that fetches hourly Home Assistant statistics through the REST API, calculates the nighttime share, and exports the result as an Excel workbook.
 
-By default, nighttime for Flensburg is defined as:
+By default, the tool uses Flensburg as an example location. For any location, nighttime is defined as:
 
 ```text
 sunset - 1 hour through sunrise on the next day + 1 hour
@@ -54,10 +54,19 @@ Or with explicit parameters:
 
 ## Common Examples
 
-Sun-based night window for Flensburg, last 3 months:
+Sun-based night window with the default example location Flensburg, last 3 months:
 
 ```bash
 ./bin/python ha_nachtverbrauch_excel_rest.py
+```
+
+Minimal run for your own location:
+
+```bash
+./bin/python ha_nachtverbrauch_excel_rest.py \
+  --location-name "Hamburg" \
+  --latitude 53.5511 \
+  --longitude 9.9937
 ```
 
 Sun-based night window for 12 months:
