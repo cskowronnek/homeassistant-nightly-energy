@@ -2,28 +2,28 @@
 
 Deutsch | [English](README.en.md)
 
-Dieses Verzeichnis enthaelt ein kleines Python-Tool, das stuendliche Home-Assistant-Statistikwerte per REST abruft, den Nachtanteil berechnet und eine Excel-Datei exportiert.
+Dieses Verzeichnis enthält ein kleines Python-Tool, das stündliche Home-Assistant-Statistikwerte per REST abruft, den Nachtanteil berechnet und eine Excel-Datei exportiert.
 
-Standardmaessig wird die Nacht fuer Flensburg so definiert:
+Standardmäßig wird die Nacht für Flensburg so definiert:
 
 ```text
 Sonnenuntergang - 1 Stunde bis Sonnenaufgang am Folgetag + 1 Stunde
 ```
 
-Randstunden werden anteilig gewichtet. Wenn also nur 30 Minuten einer Stundenmessung im Nachtfenster liegen, zaehlt nur 50 Prozent des kWh-Werts.
+Randstunden werden anteilig gewichtet. Wenn also nur 30 Minuten einer Stundenmessung im Nachtfenster liegen, zählt nur 50 Prozent des kWh-Werts.
 
 ## Dateien im Repo
 
 | Datei | Zweck |
 |---|---|
-| `ha_nachtverbrauch_excel_rest.py` | Hauptskript fuer REST-Abruf, Nachtberechnung und Excel-Export. |
+| `ha_nachtverbrauch_excel_rest.py` | Hauptskript für REST-Abruf, Nachtberechnung und Excel-Export. |
 | `STARTPARAMETER.md` | Referenz aller wichtigen Startparameter. |
 | `README.en.md` | Englische Fassung dieser README. |
 | `STARTPARAMETER.en.md` | Englische Fassung der Startparameter-Referenz. |
-| `requirements.txt` | Python-Abhaengigkeiten. |
-| `.gitignore` | Schliesst venv, Cache und erzeugte Excel-Dateien aus. |
+| `requirements.txt` | Python-Abhängigkeiten. |
+| `.gitignore` | Schließt venv, Cache und erzeugte Excel-Dateien aus. |
 
-Lokale Arbeitsverzeichnisse koennen zusaetzlich eine venv (`bin/`, `lib/`, `pyvenv.cfg`) und erzeugte Excel-Dateien enthalten. Diese Dateien gehoeren nicht ins Git-Repo.
+Lokale Arbeitsverzeichnisse können zusätzlich eine venv (`bin/`, `lib/`, `pyvenv.cfg`) und erzeugte Excel-Dateien enthalten. Diese Dateien gehören nicht ins Git-Repo.
 
 ## Schnellstart in WSL
 
@@ -54,13 +54,13 @@ Oder mit direkten Parametern:
 
 ## Typische Beispiele
 
-Sonnenbasierte Nacht fuer Flensburg, letzte 3 Monate:
+Sonnenbasierte Nacht für Flensburg, letzte 3 Monate:
 
 ```bash
 ./bin/python ha_nachtverbrauch_excel_rest.py
 ```
 
-Sonnenbasierte Nacht fuer 12 Monate:
+Sonnenbasierte Nacht für 12 Monate:
 
 ```bash
 ./bin/python ha_nachtverbrauch_excel_rest.py \
@@ -107,11 +107,11 @@ Kurzer Check:
 
 ## Ergebnis
 
-Die Excel-Datei enthaelt u. a.:
+Die Excel-Datei enthält u. a.:
 
 | Blatt | Inhalt |
 |---|---|
-| `Ueberblick` | Parameter, Zeitraum, Ort, Summen und Durchschnitt. |
+| `Überblick` | Parameter, Zeitraum, Ort, Summen und Durchschnitt. |
 | `Monate` | Monatsaggregation des Nachtverbrauchs. |
-| `Naechte` | Verbrauch je Nacht, Vollstaendigkeit und Diagramm. |
-| `Stundenwerte` | Details je Stundenwert inkl. Ueberlappung und anteiliger kWh. |
+| `Nächte` | Verbrauch je Nacht, Vollständigkeit und Diagramm. |
+| `Stundenwerte` | Details je Stundenwert inkl. Überlappung und anteiliger kWh. |
