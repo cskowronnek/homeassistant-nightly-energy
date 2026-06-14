@@ -1,0 +1,4 @@
+astral>=3.2
+pandas>=3.0
+requests>=2.34
+openpyxl>=3.1

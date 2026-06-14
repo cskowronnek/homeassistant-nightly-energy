@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+bin/
+include/
+lib/
+lib64
+pyvenv.cfg
+.venv/
+venv/
+
+# Generated exports
+*.xlsx
+*.xls
+*.csv
+
+# Local secrets/config
+.env
+*.env
