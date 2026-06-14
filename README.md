@@ -1,5 +1,7 @@
 # Home Assistant Nachtverbrauch
 
+Deutsch | [English](README.en.md)
+
 Dieses Verzeichnis enthaelt ein kleines Python-Tool, das stuendliche Home-Assistant-Statistikwerte per REST abruft, den Nachtanteil berechnet und eine Excel-Datei exportiert.
 
 Standardmaessig wird die Nacht fuer Flensburg so definiert:
@@ -16,6 +18,8 @@ Randstunden werden anteilig gewichtet. Wenn also nur 30 Minuten einer Stundenmes
 |---|---|
 | `ha_nachtverbrauch_excel_rest.py` | Hauptskript fuer REST-Abruf, Nachtberechnung und Excel-Export. |
 | `STARTPARAMETER.md` | Referenz aller wichtigen Startparameter. |
+| `README.en.md` | Englische Fassung dieser README. |
+| `STARTPARAMETER.en.md` | Englische Fassung der Startparameter-Referenz. |
 | `requirements.txt` | Python-Abhaengigkeiten. |
 | `.gitignore` | Schliesst venv, Cache und erzeugte Excel-Dateien aus. |
 

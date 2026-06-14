@@ -1,5 +1,7 @@
 # Startparameter
 
+Deutsch | [English](STARTPARAMETER.en.md)
+
 Das Tool kann mit Parametern oder Umgebungsvariablen gestartet werden.
 
 ```bash
